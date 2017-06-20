@@ -3,9 +3,9 @@ package com.gaoshiwei.mvptest.presenter;
 import android.os.Handler;
 
 import com.gaoshiwei.mvptest.bean.User;
-import com.gaoshiwei.mvptest.biz.IUserBiz;
-import com.gaoshiwei.mvptest.biz.OnLoginListener;
-import com.gaoshiwei.mvptest.biz.UserBiz;
+import com.gaoshiwei.mvptest.model.IUserBiz;
+import com.gaoshiwei.mvptest.model.OnLoginListener;
+import com.gaoshiwei.mvptest.model.UserBiz;
 import com.gaoshiwei.mvptest.view.IUserLoginView;
 
 /**

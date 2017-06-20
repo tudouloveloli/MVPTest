@@ -1,4 +1,4 @@
-package com.gaoshiwei.mvptest.biz;
+package com.gaoshiwei.mvptest.model;
 
 
 import com.gaoshiwei.mvptest.bean.User;

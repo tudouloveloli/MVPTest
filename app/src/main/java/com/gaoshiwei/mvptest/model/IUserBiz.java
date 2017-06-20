@@ -1,4 +1,4 @@
-package com.gaoshiwei.mvptest.biz;
+package com.gaoshiwei.mvptest.model;
 
 /**
  * Created by gaoshiwei on 2017/6/14.
