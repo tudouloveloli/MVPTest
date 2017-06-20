@@ -16,7 +16,7 @@ public class UserLoginPresenter {
 
     private IUserModel userModel;
     private IUserLoginView userLoginView;
-    // handler 对象
+    // handler对象
     private Handler mHandler = new Handler();
 
     public UserLoginPresenter(IUserLoginView userLoginView) {
