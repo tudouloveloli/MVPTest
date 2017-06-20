@@ -7,7 +7,7 @@ import com.gaoshiwei.mvptest.bean.User;
  * Created by gaoshiwei on 2017/6/14.
  */
 
-public class UserBiz implements IUserBiz {
+public class UserModel implements IUserModel {
     @Override
     public void login(final String username, final String password, final OnLoginListener loginListener) {
         new Thread(new Runnable() {

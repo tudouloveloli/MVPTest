@@ -8,11 +8,13 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.gaoshiwei.mvptest.R;
 import com.gaoshiwei.mvptest.bean.User;
 import com.gaoshiwei.mvptest.presenter.UserLoginPresenter;
 import com.gaoshiwei.mvptest.view.IUserLoginView;
 
 public class UserLoginActivity extends AppCompatActivity implements IUserLoginView {
+
     private EditText mEtUsername, mEtPassword;
     private Button mBtnLogin, mBtnClear;
     private ProgressBar mPbLoading;
@@ -26,6 +28,9 @@ public class UserLoginActivity extends AppCompatActivity implements IUserLoginVi
 
     }
 
+    /**
+     * init View
+     */
     private void initView() {
 
         mEtUsername = (EditText) findViewById(R.id.edit_name);

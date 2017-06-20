@@ -4,10 +4,10 @@ import com.gaoshiwei.mvptest.bean.User;
 
 /**
  * Created by gaoshiwei on 2017/6/14.
- *
  */
 
 public interface IUserLoginView {
+
     String getUserName();
 
     String getPassword();

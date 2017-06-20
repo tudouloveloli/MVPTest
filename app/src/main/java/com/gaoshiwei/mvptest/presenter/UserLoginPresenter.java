@@ -3,9 +3,9 @@ package com.gaoshiwei.mvptest.presenter;
 import android.os.Handler;
 
 import com.gaoshiwei.mvptest.bean.User;
-import com.gaoshiwei.mvptest.model.IUserBiz;
+import com.gaoshiwei.mvptest.model.IUserModel;
 import com.gaoshiwei.mvptest.model.OnLoginListener;
-import com.gaoshiwei.mvptest.model.UserBiz;
+import com.gaoshiwei.mvptest.model.UserModel;
 import com.gaoshiwei.mvptest.view.IUserLoginView;
 
 /**
@@ -14,22 +14,25 @@ import com.gaoshiwei.mvptest.view.IUserLoginView;
 
 public class UserLoginPresenter {
 
-    private IUserBiz userBiz;
+    private IUserModel userModel;
     private IUserLoginView userLoginView;
-
+    // handler 对象
     private Handler mHandler = new Handler();
 
-    public UserLoginPresenter(IUserLoginView userLoginView){
+    public UserLoginPresenter(IUserLoginView userLoginView) {
 
-        this.userLoginView=userLoginView;
-        this.userBiz=new UserBiz();
+        this.userLoginView = userLoginView;
+        this.userModel = new UserModel();
 
     }
 
+    /**
+     * login
+     */
 
     public void login() {
         userLoginView.showLoading();
-        userBiz.login(userLoginView.getUserName(), userLoginView.getPassword(), new OnLoginListener() {
+        userModel.login(userLoginView.getUserName(), userLoginView.getPassword(), new OnLoginListener() {
             @Override
             public void loginSuccess(final User user) {
                 //需要在UI线程执行
@@ -62,10 +65,11 @@ public class UserLoginPresenter {
         });
 
 
-
-
     }
 
+    /**
+     * clean status
+     */
     public void clear() {
         userLoginView.clearUserName();
         userLoginView.clearPassword();

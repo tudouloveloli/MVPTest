@@ -7,7 +7,6 @@ import com.gaoshiwei.mvptest.bean.User;
  */
 
 /**
- *
  * 一个回调接口来通知登录的状态
  */
 public interface OnLoginListener {
